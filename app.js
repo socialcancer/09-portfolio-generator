@@ -1,22 +1,16 @@
-// const animalArray = ['dog', 'cat', 'pig'];
+const profileDataArgs = process.argv.slice(2);
 
-// animalArray.push('cow');
+const printProfileData = profileDataArr => {
+    // This...
+    for (let i = 0; i < profileDataArr.length; i += 1) {
+        console.log(profileDataArr[i]);
+    }
 
-// const personObj = {
-//     name: 'Daniel',
-//     age: 40
-// };
+    console.log('================');
 
-// personObj.age = 100;
-// personObj.occupation = 'Developer';
+    // Is the same as this...
+    profileDataArr.forEach(profileItem => console.log(profileItem));
+};
 
-// console.log(animalArray);
-// console.log(personObj);
-
-// const printProfileData = (profileDataArr) => {
-//     console.log(profileDataArr);
-// };
-
-//notice the lack of parentheses aroun the `profileDataArr` parameter?
-profileDataArr.forEach(profileItem => console.log(profileItem));
+printProfileData(profileDataArgs);
 
